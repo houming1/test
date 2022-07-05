@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="rvConfig"
+            type="com.fdf.base.bind.RecyclerViewConfig" />
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        app:background_normal="@color/white"
+        app:corner_radius="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home"
+            rvConfig="@{(Object)rvConfig}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="4dp"
+            android:scrollbarThumbVertical="@color/theme_color"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btn_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/txt_btn_cancel"
+            android:textSize="14sp"
+            app:background_normal="@color/act_bg_color"
+            app:corner_radius_bottom_left="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:text_color_normal="@color/common_grey" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/txt_confirm"
+            android:textSize="14sp"
+            app:background_normal="@color/theme_color"
+            app:corner_radius_bottom_right="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_reset"
+            app:text_color_normal="@color/white" />
+
+
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

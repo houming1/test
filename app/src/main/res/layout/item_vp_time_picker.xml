@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <com.powercore.hydrahome.widget.PickerView
+            android:id="@+id/wheel_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            app:npv_DividerColor="#F1F1F1"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_RespondChangeOnDetached="false"
+            app:npv_ShowDivider="true"
+            app:npv_ShownCount="5"
+            app:npv_TextColorNormal="#ACACAC"
+            app:npv_TextColorSelected="#242B2B"
+            app:npv_TextSizeNormal="16sp"
+            app:npv_TextSizeSelected="16sp"
+            app:npv_WrapSelectorWheel="false" />
+
+        <com.powercore.hydrahome.widget.PickerView
+            android:id="@+id/wheel_minute"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            app:npv_DividerColor="#F1F1F1"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_RespondChangeOnDetached="false"
+            app:npv_ShowDivider="true"
+            app:npv_ShownCount="5"
+            app:npv_TextColorNormal="#ACACAC"
+            app:npv_TextColorSelected="#242B2B"
+            app:npv_TextSizeNormal="16sp"
+            app:npv_TextSizeSelected="16sp"
+            app:npv_WrapSelectorWheel="false" />
+
+    </LinearLayout>
+</layout>

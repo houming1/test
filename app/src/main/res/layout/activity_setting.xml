@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.setting.SettingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F7F9"
+        android:orientation="vertical"
+        tools:context=".ui.activity.setting.SettingActivity">
+
+        <TextView
+            android:id="@+id/change_password"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:drawableEnd="@mipmap/icon_more"
+            android:text="Change Password"
+            android:textColor="#ff222825"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/company_website"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:drawableEnd="@mipmap/icon_more"
+            android:text="Company Website"
+            android:textColor="#ff222825"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/app_guide"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:drawableEnd="@mipmap/icon_more"
+            android:text="App Guide"
+            android:textColor="#ff222825"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/privacy_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:drawableEnd="@mipmap/icon_more"
+            android:text="Privacy Agreement"
+            android:textColor="#ff222825"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>

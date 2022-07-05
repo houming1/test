@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#C01818</color>
+    <color name="teal_700">#C01818</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="theme_color">#C01818</color>
+    <color name="theme_color2">#800DA79B</color>
+    <color name="theme_yellow">#FFD818</color>
+    <color name="theme_white">#f8fafc</color>
+    <color name="txt_color">#333333</color>
+    <color name="act_bg_color">#F7F8F8</color>
+    <color name="color_AA">#AAAAAA</color>
+    <color name="home_item_check_color">#14C01818</color>
+    <color name="home_item_uncheck_color">#00000000</color>
+
+    <color name="theme_color20">#40C01818</color>
+    <color name="border_grey_color">#AAAAAA</color>
+    <color name="txt_grey_color">#868989</color>
+    <color name="divider_color">#DDDDDD</color>
+
+    <color name="color_f7">#F7F7F7</color>
+    <color name="color_ac">#ACACAC</color>
+    <color name="red">#FF7A7A</color>
+    <color name="color_c0f">#C0ffffff</color>
+    <color name="color_f1">#F1F1F1</color>
+    <color name="color_f8">#F8F8F8</color>
+    <color name="color_theme">#C01818</color>
+    <color name="color_66">#666666</color>
+    <color name="color_29">#FF2929</color>
+    <color name="color_12">#121212</color>
+    <color name="color_def_bg">#F6F7F9</color>
+
+    <color name="color_F9D5D5">#F9D5D5</color>
+    <color name="color_B7B9B9">#B7B9B9</color>
+    <color name="color_8f9392">#ff8f9392</color>
+    <color name="color_33">#333333</color>
+
+    <color name="color_99">#999999</color>
+    <color name="color_242b2b">#ff242b2b</color>
+    <color name="color_EEF0FA">#EEF0FA</color>
+
+    <color name="color_b7b9">#B7B9B9</color>
+
+
+</resources>

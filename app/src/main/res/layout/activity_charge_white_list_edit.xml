@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.bluetooth.ChargeWhiteListEditViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                android:src="@mipmap/ic_splash_logo"
+                app:layout_constraintBottom_toTopOf="@id/tv_title1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+              />
+
+
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Please set up device WiFi"
+                android:textColor="@color/txt_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".3" />
+
+
+            <com.ruffian.library.widget.REditText
+                android:id="@+id/emailCode"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="26dp"
+                android:drawableStart="@mipmap/icon_wifi"
+                android:drawablePadding="5dp"
+                android:hint="Please select a WiFi network"
+                android:paddingStart="12dp"
+                android:singleLine="true"
+                android:text="@={vm.wifiName}"
+                android:textSize="14sp"
+                app:background_normal="@color/color_f7"
+                app:corner_radius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title1" />
+
+            <ImageView
+                android:id="@+id/iv_drop_down"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="14dp"
+                android:src="@mipmap/ic_spinner"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/emailCode"
+                app:layout_constraintEnd_toEndOf="@id/emailCode"
+                app:layout_constraintTop_toTopOf="@+id/emailCode" />
+
+
+            <com.ruffian.library.widget.REditText
+                android:id="@+id/et_pwd"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@mipmap/icon_lock"
+                android:drawablePadding="10dp"
+                android:hint="WiFi Password"
+                android:paddingStart="12dp"
+                android:singleLine="true"
+                android:text="@={vm.password}"
+                android:textSize="@dimen/sp_14"
+                app:background_normal="@color/color_f7"
+                app:corner_radius="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailCode" />
+
+
+            <ImageView
+                android:id="@+id/toLockPassword"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_pwd"
+                app:layout_constraintEnd_toEndOf="@id/et_pwd"
+                app:layout_constraintTop_toTopOf="@+id/et_pwd" />
+
+            <LinearLayout
+                android:id="@+id/ll_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_pwd"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_remember"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/remeber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Remember password"
+                    android:textColor="#8F9392"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/btn_netx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Connect To Network"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:background_normal="@color/theme_color"
+                app:corner_radius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

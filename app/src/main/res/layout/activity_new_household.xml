@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.family.add.NewHouseholdViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/act_bg_color"
+        android:padding="15dp"
+        tools:context=".ui.activity.family.add.NewFamilyActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_family_s_name"
+                        android:textColor="#ff222825"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_rightArrow1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_home_name"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/txt_please_enter_a_family_name"
+                        android:text="@={vm.addHomeParams.householdName}"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_rightArrow1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_rightArrow1"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_max_power"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_maximum_home_load_power"
+                        android:textColor="#ff222825"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_rightArrow2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/et_power"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="@={vm.addHomeParams.householdMaxLoad}"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_kwh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/txt_kw"
+                        app:layout_constraintBaseline_toBaselineOf="@id/et_power"
+                        app:layout_constraintBottom_toBottomOf="@+id/et_power"
+                        app:layout_constraintStart_toEndOf="@id/et_power"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                    <ImageView
+                        android:id="@+id/iv_rightArrow2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_day_rate_tariff"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/day_rate_tariff_p_kWh"
+                        android:textColor="#ff222825"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_rightArrow3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/et_day_rate_tariff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="@={vm.addHomeParams.dayRate}"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_p_kwh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="--p"
+                        app:layout_constraintBaseline_toBaselineOf="@id/et_day_rate_tariff"
+                        app:layout_constraintBottom_toBottomOf="@+id/et_day_rate_tariff"
+                        app:layout_constraintStart_toEndOf="@id/et_day_rate_tariff"
+                        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                    <ImageView
+                        android:id="@+id/iv_rightArrow3"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_night_rate_tariff"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/night_rate_tariff_p_kWh"
+                        android:textColor="#ff222825"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_rightArrow4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/et_night_rate_tariff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="@={vm.addHomeParams.nightRate}"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_p_kwh2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="--p"
+                        app:layout_constraintBaseline_toBaselineOf="@id/et_night_rate_tariff"
+                        app:layout_constraintBottom_toBottomOf="@+id/et_night_rate_tariff"
+                        app:layout_constraintStart_toEndOf="@id/et_night_rate_tariff"
+                        app:layout_constraintTop_toBottomOf="@+id/et_night_rate_tariff" />
+
+                    <ImageView
+                        android:id="@+id/iv_rightArrow4"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_randomised_delay"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/randomised_delay"
+                        android:textColor="#ff222825"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/iv_rightArrow5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/et_randomised_delay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="@={vm.addHomeParams.delay}"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/tv_s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="--s"
+                        app:layout_constraintBaseline_toBaselineOf="@id/et_randomised_delay"
+                        app:layout_constraintBottom_toBottomOf="@+id/et_randomised_delay"
+                        app:layout_constraintStart_toEndOf="@id/et_randomised_delay"
+                        app:layout_constraintTop_toBottomOf="@+id/et_randomised_delay" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_rightArrow5"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right_grey"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/divider_color" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_member_title"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_family_member"
+                        android:textColor="#ff222825"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.ruffian.library.widget.RConstraintLayout
+                        android:id="@+id/rcl_add_home"
+                        android:layout_width="57dp"
+                        android:layout_height="24dp"
+                        app:background_normal="@color/theme_color"
+                        app:corner_radius="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/iv_add"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_charge_point_add"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tv_add"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_add"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/iv_add"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </com.ruffian.library.widget.RConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        rvConfig="@{(Object)vm.memberRvConfig}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/txt_kw"
+                        android:textColor="#ff8f9392"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_member_title" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_notes"
+                        android:textColor="#ff222825"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.ruffian.library.widget.REditText
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="top|start"
+                        android:hint="Please enter your notes!"
+                        android:padding="5dp"
+                        android:text="@={vm.addHomeParams.note}"
+                        android:textSize="14sp"
+                        app:border_color_normal="@color/border_grey_color"
+                        app:border_width_normal="1dp"
+                        app:corner_radius="6dp"
+                        app:text_color_normal="@color/txt_color" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/txt_btn_confirm"
+            android:textSize="14sp"
+            app:background_normal="#B7B9B9"
+            app:corner_radius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:text_color_normal="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

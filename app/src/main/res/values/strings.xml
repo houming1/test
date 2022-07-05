@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">HydraHome</string>
+    <string name="picker_str_error">Click Error</string>
+    <string name="picker_str_sure">Sure</string>
+    <string name="main_bt_disable_msg">Bluetooth is disable</string>
+    <string name="main_location_disable_msg">Location is disable</string>
+
+    <string name="account">Account</string>
+    <string name="please_enter_your_account">Please enter your account</string>
+    <string name="password">Password</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="not_registered_yet">Not registered yet?</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="title_activity_reset_password">ResetPassword</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email">Email</string>
+    <string name="please_enter_your_email">Please enter your email</string>
+    <string name="send">Send</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="please_enter_your_verification_code">Please enter your verification code</string>
+    <string name="username">Username</string>
+    <string name="please_enter_a_username">Please enter a username</string>
+    <string name="checked_password">Checked Password</string>
+    <string name="please_re_enter_your_password">Please re-enter your password</string>
+    <string name="txt_name_cannot_be_a_pure_number">Username cannot be a pure number</string>
+    <string name="txt_register_success">Register success.</string>
+    <string name="please_enter_your_new_password">Please enter your new password</string>
+    <string name="please_re_enter_your_new_password">Please re-enter your new password</string>
+    <string name="reset_password">Reset password </string>
+
+    <string name="add_household">Add Household</string>
+    <string name="charging_profile_settings">Charging Profile Settings</string>
+    <string name="household_settings">Household Settings</string>
+    <string name="tips">Tips</string>
+    <string name="txt_no_have_family_tips">To begin setting up your home charger please set up a Household Account.</string>
+    <string name="txt_no_have_family_tips1">This allows load management and managing chargers at different properties under one Hydra APP account.</string>
+    <string name="click_here_to_begin"> Click here to begin</string>
+    <string name="txt_family_settings">Family Settings</string>
+
+    <string name="new_household">New Household</string>
+    <string name="txt_add_family_member_s_email">Add family members email</string>
+    <string name="txt_please_enter_member_s_email">Please enter members email</string>
+    <string name="txt_btn_cancel">Cancel</string>
+    <string name="txt_btn_confirm">Confirm</string>
+    <string name="txt_enter_the_member_email">Please enter the family member\'s email address</string>
+    <string name="txt_incorrect_eamil">Incorrect email format</string>
+
+    <string name="txt_maximum_home_load_power">Households maximum load</string>
+    <string name="txt_btn_ok">Ok</string>
+    <string name="txt_family_name">Household name</string>
+    <string name="txt_please_enter_home_s_name">Please enter household name</string>
+    <string name="txt_please_enter_a_family_name">Please enter a household name</string>
+
+    <string name="txt_family_s_name">Household name</string>
+    <string name="txt_kw">--kw</string>
+    <string name="txt_p_kw">--p/kwh</string>
+    <string name="txt_family_member">Family Member</string>
+    <string name="txt_add">Add</string>
+    <string name="txt_notes">Notes</string>
+
+    <string name="randomised_delay">Randomised delay</string>
+
+    <string name="day_rate_tariff_p_kWh">Day rate tariff (p/kWh)</string>
+    <string name="night_rate_tariff_p_kWh">Night rate tariff (p/kWh)</string>
+
+    <string name="txt_start_time">Start time</string>
+    <string name="txt_set_charging_start_time">Set charging start time</string>
+
+    <string name="txt_end_time">End time</string>
+    <string name="txt_set_charging_end_time">Set charging end time</string>
+
+    <string name="txt_bluetooth_connect_device">Bluetooth Connect Charge Point</string>
+
+    <string name="empty_ble_tips">Sorry, there is no bluetooth device\n available at present. Please try again</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="txt_confirm">Confirm</string>
+    <string name="txt_next">Next</string>
+    <string name="txt_start_charging">Start Charging</string>
+
+    <string-array name="english_week_string_array">
+        <item>SUN</item>
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+    </string-array>
+
+    <string-array name="chinese_week_string_array">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+    <string name="txt_energy">Energy</string>
+    <string name="txt_voltage">Voltage</string>
+    <string name="txt_current">Current</string>
+    <string name="txt_power">Power</string>
+
+    <string name="discard_selection">Discard selection?</string>
+    <string name="clipping">Clipping...</string>
+    <string name="loading">Loading...</string>
+
+</resources>

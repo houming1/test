@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="data"
+            type="com.powercore.hydrahome.net.entity.rsp.WeekRsp" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@{data.isSel()?@drawable/week_red_bg:@drawable/week_white_bg}">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{data.isSel()?@drawable/icon_rili_withe:@drawable/icon_rili_red}"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.weekNmae}"
+            android:textStyle="bold"
+            android:textColor="@{data.isSel()?@color/white:@color/color_242b2b}"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</layout>

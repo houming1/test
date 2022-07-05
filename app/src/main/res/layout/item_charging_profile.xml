@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.powercore.hydrahome.net.entity.rsp.ProfileItemRsp" />
+    </data>
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:clickable="true"
+        android:paddingBottom="1dp">
+        <com.ruffian.library.widget.RLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:background_normal="@color/white"
+            app:corner_radius="8dp"
+            app:shadow_color="@color/white"
+            app:shadow_dx="@dimen/dp_4"
+            app:shadow_dy="@dimen/dp_4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/icon_chage_logo"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="@{data.hydraHomeHouseholdProfileName}"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/edit"
+                    android:layout_width="64dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="Edit"
+                    android:textColor="#ffffffff"
+                    android:textSize="13sp"
+                    app:background_normal="@color/theme_color"
+                    app:corner_radius="@dimen/dp_40" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:drawableLeft="@mipmap/icon_calendar_logo"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:text="@{data.tName()}"
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:drawableLeft="@mipmap/icon_clocks"
+                        android:drawablePadding="4dp"
+                        android:text='@{data.hydraHomeHouseholdProfileDayStart+"-"+data.hydraHomeHouseholdProfileDayStop}'
+                        android:textColor="#ff333333"
+                        android:textSize="13sp" />
+
+                    <com.ruffian.library.widget.RLinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:background_normal="#E9EBEE"
+                        app:corner_radius="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:src="@mipmap/icon_sun" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Day rate"
+                                android:textColor="#ff666666"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="N/A"
+                                android:textColor="#ff333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                    </com.ruffian.library.widget.RLinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:drawableLeft="@mipmap/icon_clocks"
+                        android:drawablePadding="4dp"
+                        android:text='@{data.hydraHomeHouseholdProfileNightStart+"-"+data.hydraHomeHouseholdProfileNightStop}'
+                        android:textColor="#ff333333"
+                        android:textSize="13sp" />
+
+                    <com.ruffian.library.widget.RLinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="60dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:background_normal="#E9EBEE"
+                        app:corner_radius="8dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:src="@mipmap/icon_moon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Night rate"
+                                android:textColor="#ff666666"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:text="N/A"
+                                android:textColor="#ff333333"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                    </com.ruffian.library.widget.RLinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.ruffian.library.widget.RLinearLayout>
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/detele"
+                android:layout_width="84dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:drawableTop="@mipmap/icon_delete"
+                android:gravity="center"
+                android:paddingTop="36dp"
+                android:paddingBottom="36dp"
+                android:text="Detele"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:background_normal="#C01818"
+                app:corner_radius="8dp" />
+        </RelativeLayout>
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</layout>

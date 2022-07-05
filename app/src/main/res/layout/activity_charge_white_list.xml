@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.bluetooth.ChargeWhiteListViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.bluetooth.ChargeWhiteListActivity"
+        android:background="#F6F7F9">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_next">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_charge_point"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp" />
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:gravity="center"
+
+            android:padding="@dimen/dp_10"
+            android:text="Pair This Charge Point"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:background_normal="@color/theme_color"
+            app:corner_radius="8dp" />
+    </RelativeLayout>
+</layout>

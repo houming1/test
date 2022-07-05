@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ruffian.library.widget.RConstraintLayout
+            android:id="@+id/rcl_center"
+            android:layout_width="300dp"
+            android:layout_height="280dp"
+            app:background_normal="@color/white"
+            app:corner_radius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tips"
+                android:textColor="#ff242b2b"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hint_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/txt_no_have_family_tips"
+                android:textColor="#ff242b2b"
+                android:textSize="15sp"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/hint_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+            <TextView
+                android:id="@+id/hint_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/txt_no_have_family_tips1"
+                android:textColor="#ff242b2b"
+                android:textSize="15sp"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/btn_go"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hint_1" />
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/btn_go"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/click_here_to_begin"
+                app:background_normal="@color/theme_color"
+                app:background_pressed="@color/common_grey"
+                app:corner_radius="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:text_color_normal="@color/white" />
+
+
+        </com.ruffian.library.widget.RConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:src="@mipmap/ic_pop_tips_close"
+            app:layout_constraintBottom_toTopOf="@id/rcl_center"
+            app:layout_constraintEnd_toEndOf="@id/rcl_center" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

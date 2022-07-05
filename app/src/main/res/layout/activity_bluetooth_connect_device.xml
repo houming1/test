@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.bluetooth.BluetoothConnectDeviceViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.bluetooth.BluetoothConnectDeviceActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_marginTop="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ble_home_cover"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="75dp"
+                    android:src="@mipmap/ble_bluetooth_cover" />
+
+                <com.ruffian.library.widget.RRelativeLayout
+                    android:id="@+id/rl_blu"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    app:background_normal="@color/white"
+                    app:corner_radius="5dp"
+                    app:border_color_normal="@color/theme_color"
+                    app:border_width_normal="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:text="Bluetooth"
+                        android:textColor="#ff163223"
+                        android:textSize="14sp" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/swb"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:checked="true"
+                        app:kswBackColor="@color/swb_bg_color"
+                        app:kswThumbColor="@color/white"
+                        app:kswThumbMargin="2dp"
+                        app:kswThumbWidth="16dp" />
+
+                </com.ruffian.library.widget.RRelativeLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turn On Bluetooth To Search For Charge Point "
+                android:textColor="#ff121212"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Connect Device"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            app:background_normal="@color/theme_color"
+            app:corner_radius="8dp" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.chargingprofile.ChargingProfileViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F7F9"
+        tools:context=".ui.activity.chargingprofile.ChargingProfileActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_charging_profile"
+            rvConfig="@{(Object)vm.chargingProfileRvConfig}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/add_new_charging_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@mipmap/icon_add"
+            android:drawablePadding="@dimen/dp_4"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="Add New Charging Profile"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:background_normal="@color/theme_color"
+            app:corner_radius="20dp" />
+    </RelativeLayout>
+</layout>

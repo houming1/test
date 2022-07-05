@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.register.RegisterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.register.RegisterActivity">
+
+        <com.hjq.bar.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:leftIcon="@mipmap/icon_back_back"
+            app:leftIconTint="@color/black"
+            app:lineVisible="false"
+            app:title="Sign Up"
+            app:titleColor="@color/black" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_bar"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/sign_up_top" />
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/mShadowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="130dp"
+                    app:hl_centerColor="@color/white"
+                    app:hl_cornerRadius="16dp"
+                    app:hl_shadowColor="#14000000"
+                    app:hl_shadowHiddenTop="false"
+                    app:hl_shadowLimit="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="30dp"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/email"
+                                android:textColor="@color/color_66"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/color_29"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <com.ruffian.library.widget.RRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginRight="16dp"
+                            app:background_normal="@color/color_f8"
+                            app:corner_radius="50dp">
+
+                            <ImageView
+                                android:id="@+id/email_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dp_10"
+                                android:src="@mipmap/ic_user_icon" />
+
+                            <EditText
+                                android:id="@+id/et_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/btn_send"
+                                android:layout_toRightOf="@+id/email_icon"
+                                android:background="@null"
+                                android:hint="@string/please_enter_your_email"
+                                android:text="@={vm.registerReq.email}"
+                                android:textColor="@color/color_12"
+                                android:textSize="13sp" />
+
+                            <com.ruffian.library.widget.RTextView
+                                android:id="@+id/btn_send"
+                                android:layout_width="68dp"
+                                android:layout_height="@dimen/dp_40"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/dp_10"
+                                android:gravity="center"
+                                android:text="@string/send"
+                                android:textColor="#ffffffff"
+                                android:textSize="13sp"
+                                app:background_normal="@color/color_theme"
+                                app:corner_radius_bottom_left="@dimen/dp_10"
+                                app:corner_radius_bottom_right="50dp"
+                                app:corner_radius_top_left="@dimen/dp_10"
+                                app:corner_radius_top_right="50dp" />
+                        </com.ruffian.library.widget.RRelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/verification_code"
+                                android:textColor="@color/color_66"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/color_29"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <com.ruffian.library.widget.RLinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginRight="16dp"
+                            android:orientation="horizontal"
+                            app:background_normal="@color/color_f8"
+                            app:corner_radius="50dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dp_10"
+                                android:src="@mipmap/ic_user_icon" />
+
+                            <EditText
+                                android:id="@+id/et_note"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/send"
+                                android:layout_toRightOf="@+id/email_icon"
+                                android:background="@null"
+                                android:hint="@string/please_enter_your_verification_code"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:text="@={vm.registerReq.note}"
+                                android:textColor="@color/color_12"
+                                android:textSize="13sp" />
+
+                        </com.ruffian.library.widget.RLinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/username"
+                                android:textColor="@color/color_66"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/color_29"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <com.ruffian.library.widget.RLinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginRight="16dp"
+                            android:orientation="horizontal"
+                            app:background_normal="@color/color_f8"
+                            app:corner_radius="50dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dp_10"
+                                android:src="@mipmap/ic_user_icon" />
+
+                            <EditText
+                                android:id="@+id/et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/send"
+                                android:layout_toRightOf="@+id/email_icon"
+                                android:background="@null"
+                                android:hint="@string/please_enter_a_username"
+                                android:maxEms="16"
+                                android:singleLine="true"
+                                android:text="@={vm.registerReq.name}"
+                                android:textColor="@color/color_12"
+                                android:textSize="13sp" />
+
+                        </com.ruffian.library.widget.RLinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/password"
+                                android:textColor="@color/color_66"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/color_29"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <com.ruffian.library.widget.RRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginRight="16dp"
+                            app:background_normal="@color/color_f8"
+                            app:corner_radius="50dp">
+
+                            <ImageView
+                                android:id="@+id/password_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dp_10"
+                                android:src="@mipmap/ic_user_icon" />
+
+                            <EditText
+                                android:id="@+id/et_pwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/show_pwd1"
+                                android:layout_toRightOf="@+id/password_icon"
+                                android:background="@null"
+                                android:inputType="textPassword"
+                                android:hint="@string/please_enter_your_password"
+                                android:text="@={vm.registerReq.password}"
+                                android:textColor="@color/color_12"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/show_pwd1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:src="@mipmap/icon_close_eye" />
+
+                        </com.ruffian.library.widget.RRelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/checked_password"
+                                android:textColor="@color/color_66"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/color_29"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <com.ruffian.library.widget.RRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginRight="16dp"
+                            app:background_normal="@color/color_f8"
+                            app:corner_radius="50dp">
+
+                            <ImageView
+                                android:id="@+id/repassword_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dp_10"
+                                android:src="@mipmap/ic_user_icon" />
+
+                            <EditText
+                                android:id="@+id/et_pwd1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/show_pwd2"
+                                android:layout_toRightOf="@+id/repassword_icon"
+                                android:background="@null"
+                                android:inputType="textPassword"
+                                android:hint="@string/please_re_enter_your_password"
+                                android:text="@={vm.registerReq.checkedPassword}"
+                                android:textColor="@color/color_12"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/show_pwd2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:src="@mipmap/icon_close_eye" />
+
+                        </com.ruffian.library.widget.RRelativeLayout>
+
+                        <com.ruffian.library.widget.RTextView
+                            android:id="@+id/btn_sign_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:text="Sign Up"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:background_normal="@color/color_theme"
+                            app:corner_radius="50dp" />
+                    </LinearLayout>
+                </com.lihang.ShadowLayout>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

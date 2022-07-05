@@ -1,0 +1,6 @@
+package com.powercore.hydrahome.bean
+
+import androidx.annotation.Keep
+
+@Keep
+data class EventBean(val type: String, val value: Any,val data:String)

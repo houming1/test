@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="rvConfig"
+            type="com.fdf.base.bind.RecyclerViewConfig" />
+    </data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:background_normal="@color/white"
+        app:corner_radius="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            rvConfig="@{(Object)rvConfig}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

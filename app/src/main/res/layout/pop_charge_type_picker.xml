@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.powercore.hydrahome.R" />
+
+        <variable
+            name="vm"
+            type="com.powercore.hydrahome.ui.activity.main.MainViewModel" />
+    </data>
+
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        app:background_normal="@color/white"
+        app:corner_radius_top_left="15dp"
+        app:corner_radius_top_right="15dp">
+
+        <ImageView
+            android:id="@+id/iv_box"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_charge_point"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_charge_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="PCTY20200001"
+            android:textColor="#ff242b2b"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/iv_box"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_connector_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="CHAdeMO | 50kW"
+            android:textColor="#ff585e5d"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_box"
+            app:layout_constraintStart_toEndOf="@id/iv_box" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_pop_tips_close"
+            app:layout_constraintBottom_toBottomOf="@id/iv_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_box" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:constraint_referenced_ids="cl_charge_now,cl_set_time" />
+
+        <com.ruffian.library.widget.RConstraintLayout
+            android:id="@+id/cl_charge_now"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="23dp"
+            app:border_color_normal="@color/theme_color"
+            app:border_width_normal="1dp"
+            app:corner_radius="12dp"
+            app:layout_constraintEnd_toStartOf="@id/cl_set_time"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_box">
+
+            <ImageView
+                android:id="@+id/iv_charge_now"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:src="@mipmap/ic_charge_now"
+                app:layout_constraintBottom_toTopOf="@id/tv_charge_now"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_charge_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Charge now"
+                android:textColor="#ff868989"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_charge_now" />
+
+        </com.ruffian.library.widget.RConstraintLayout>
+
+        <com.ruffian.library.widget.RConstraintLayout
+            android:id="@+id/cl_set_time"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="10dp"
+            app:border_color_normal="@color/theme_color"
+            app:border_width_normal="1dp"
+            app:corner_radius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cl_charge_now"
+            app:layout_constraintTop_toTopOf="@id/cl_charge_now">
+
+            <ImageView
+                android:id="@+id/iv_charge_set_time"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:src="@mipmap/ic_charge_set_time"
+                app:layout_constraintBottom_toTopOf="@id/tv_charge_set_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_charge_set_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set time"
+                android:textColor="#ff868989"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_charge_set_time" />
+        </com.ruffian.library.widget.RConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/group_step2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_box">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+               >
+
+                <ImageView
+                    android:id="@+id/charge_by_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_unsel"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/charge_by_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charge by Time"
+                    android:textColor="@color/color_8f9392"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/charge_by_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:drawableEnd="@mipmap/icon_more"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                android:hint="--:--:--"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:background_normal="@color/color_F9D5D5"
+                app:border_color_normal="@color/theme_color"
+                app:border_width_normal="1dp"
+                app:corner_radius="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/time_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_unsel"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/time_schedule_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Schedule"
+                    android:textColor="@color/color_8f9392"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/time_schedule_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:drawableEnd="@mipmap/icon_more"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                android:hint="26/05/2022 13:00 – 27/05/2022 17:00"
+                android:textColor="#ff333333"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:background_normal="@color/color_F9D5D5"
+                app:border_color_normal="@color/theme_color"
+                app:border_width_normal="1dp"
+                app:corner_radius="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/total_energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_unsel"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/total_energy_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total energy (kWh)"
+                    android:textColor="@color/color_8f9392"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <com.ruffian.library.widget.RRelativeLayout
+                android:id="@+id/total_energy_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                android:visibility="gone"
+                app:background_normal="@color/color_F9D5D5"
+                app:border_color_normal="@color/theme_color"
+                app:border_width_normal="1dp"
+                app:corner_radius="8dp">
+
+                <EditText
+                    android:id="@+id/total_energy_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/tv_kwh"
+                    android:background="@null"
+                    android:hint="0"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_kwh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="kWh"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+            </com.ruffian.library.widget.RRelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_unsel"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:id="@+id/cost_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cost (£)"
+                    android:textColor="@color/color_8f9392"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <com.ruffian.library.widget.RRelativeLayout
+                android:id="@+id/cost_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_15"
+                app:background_normal="@color/color_F9D5D5"
+                app:border_color_normal="@color/theme_color"
+                app:border_width_normal="1dp"
+                android:visibility="gone"
+                app:corner_radius="8dp">
+
+                <EditText
+                    android:id="@+id/cost_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/tv_money"
+                    android:background="@null"
+                    android:hint="0.00"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="£"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+            </com.ruffian.library.widget.RRelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_max_power"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/cl_charge_now">
+
+            <TextView
+                android:layout_width="106dp"
+                android:layout_height="19dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Maximum power"
+                android:textColor="#ff242b2b"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_empty"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <requestFocus />
+                </LinearLayout>
+
+                <com.ruffian.library.widget.REditText
+                    android:id="@+id/input_max_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/tv_unit"
+                    android:inputType="numberDecimal"
+                    android:minWidth="120dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="14sp"
+                    app:background_normal="#F7F8F8"
+                    app:corner_radius="6dp"
+                    app:text_color_normal="@color/txt_color" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="kW"
+                    android:textColor="#ff242b2b"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Next"
+            android:textSize="14sp"
+            app:background_normal="@color/common_grey"
+            app:corner_radius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_max_power"
+            app:text_color_normal="@color/white" />
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

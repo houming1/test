@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.ruffian.library.widget.RLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:background_normal="@color/white"
+        app:corner_radius="@dimen/dp_15">
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/connect_to_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/icon_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="20dp"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="20dp"
+            android:text="Connect To WiFi"
+            android:textSize="14sp"
+            app:background_normal="@color/white"
+            app:background_pressed="#20C01818"
+            app:corner_radius_top_left="@dimen/dp_15"
+            app:corner_radius_top_right="@dimen/dp_15"
+            app:text_color_normal="@color/color_33"
+            app:text_color_pressed="@color/theme_color" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/assign_charging_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/icon_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="20dp"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="20dp"
+            android:text="Assign Charging Profile"
+            android:textColor="@color/color_33"
+            android:textSize="14sp"
+            app:background_normal="@color/white"
+            app:background_pressed="#20C01818"
+            app:text_color_normal="@color/color_33"
+            app:text_color_pressed="@color/theme_color" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/delete_charge_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/icon_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="20dp"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="20dp"
+            android:text="Delete Charge Point"
+            android:textColor="@color/color_33"
+            android:textSize="14sp"
+            app:background_normal="@color/white"
+            app:background_pressed="#20C01818"
+            app:text_color_normal="@color/color_33"
+            app:text_color_pressed="@color/theme_color" />
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/reboot_charge_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/icon_more"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingTop="20dp"
+            android:paddingRight="@dimen/dp_15"
+            android:paddingBottom="20dp"
+            android:text="Reboot Charge Point"
+            android:textColor="@color/color_33"
+            android:textSize="14sp"
+            app:background_normal="@color/white"
+            app:background_pressed="#20C01818"
+            app:corner_radius_bottom_left="@dimen/dp_15"
+            app:corner_radius_bottom_right="@dimen/dp_15"
+            app:text_color_normal="@color/color_33"
+            app:text_color_pressed="@color/theme_color" />
+
+    </com.ruffian.library.widget.RLinearLayout>
+</layout>

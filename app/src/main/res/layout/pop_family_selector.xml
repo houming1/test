@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:background_normal="@color/white"
+        app:corner_radius="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_family"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="4dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarThumbVertical="@color/theme_color"
+            android:scrollbars="vertical" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C2C2C2"
+            app:layout_constraintTop_toBottomOf="@id/rv_family" />
+
+        <TextView
+            android:id="@+id/tv_add_family"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/add_household"
+            android:textColor="#ff585e5d"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/ic_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_1" />
+
+        <ImageView
+            android:id="@+id/ic_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/ic_family_add"
+            app:layout_constraintBottom_toBottomOf="@id/tv_add_family"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_add_family" />
+
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C2C2C2"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_family" />
+
+        <TextView
+            android:id="@+id/tv_charging_profile_settings"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/charging_profile_settings"
+            android:textColor="#ff585e5d"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/ic_charging_profile_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_2" />
+
+        <ImageView
+            android:id="@+id/ic_charging_profile_settings"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/ic_charging_set"
+            app:layout_constraintBottom_toBottomOf="@id/tv_family_set"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_family_set" />
+
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C2C2C2"
+            app:layout_constraintTop_toBottomOf="@id/tv_charging_profile_settings" />
+
+        <TextView
+            android:id="@+id/tv_family_set"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="@string/household_settings"
+            android:textColor="#ff585e5d"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ic_set"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_3" />
+
+        <ImageView
+            android:id="@+id/ic_set"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/ic_family_set"
+            app:layout_constraintBottom_toBottomOf="@id/tv_charging_profile_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_charging_profile_settings" />
+
+    </com.ruffian.library.widget.RConstraintLayout>
+</layout>

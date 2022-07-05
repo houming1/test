@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.nkr.home",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 10005,
+      "versionName": "1.0.5",
+      "outputFile": "HomeCharger_V1.0.5_20220425_R.apk"
+    }
+  ]
+}
